@@ -1,3 +1,19 @@
+
+#pragma once
+template<typename T>
+
+class nodeADT
+{
+public:
+    
+    virtual void setitem(const T& num)=0;
+    virtual void setnext( node* nextptrpoiner)=0;
+    virtual T getitem()const;
+    virtual node* getnext()const;
+ 
+};
+
+_______________________________________
 #pragma once
 #include<iostream>
 using namespace std;
@@ -12,9 +28,6 @@ public:
     node();
     node(int);
     node(int, node*);
-    void setitem(const int& num);
-    void setnext( node* nextptrpoiner);
-    int getitem()const;
-    node* getnext()const;
+    
     
 };
