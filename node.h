@@ -6,7 +6,7 @@ template<typename T>
 class node:public nodeADT<T>
 
 private:
-    node item;
+    T item;
     node* next;
 public:
     
@@ -20,7 +20,7 @@ node(T i)
 	item = i;
 }
 
-node(int i, node*ptr)
+node(T i, node*ptr)
 {
 	item = i;
 	next = ptr;
@@ -36,7 +36,7 @@ void setnext(node* nextptrpoiner)
 	next = nextptrpoiner;
 }
 
-T node::getitem() const
+T getitem() const
 {
 	return item;
 }
